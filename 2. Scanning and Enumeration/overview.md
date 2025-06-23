@@ -1,10 +1,10 @@
 ## Phase 2: Scanning & Enumeration - Overview
 
-🎯 Objective
+## 🎯 Objective
 
 To actively scan the target for open ports, services, directories, parameters, and possible vulnerabilities. This phase is crucial for mapping the real attack surface and identifying exploitable components.
 
-🔎 What Happens in This Phase?
+## 🔎 What Happens in This Phase?
 
 | Category                | Description                                              |
 |-------------------------|----------------------------------------------------------|
@@ -15,14 +15,14 @@ To actively scan the target for open ports, services, directories, parameters, a
 | Vulnerability Scanning  | Automated scanning for known CVEs or weaknesses          |
 
 
-🧠 Key Concepts
+## 🧠 Key Concepts
 
 - Enumeration helps in identifying assets like login panels, file uploads, or APIs.
 - Scanning helps detect known misconfigurations or unpatched services.
 - It's often noisy — requires proper authorization in professional assessments.
 
 
-🧰 Tools Used in This Phase
+## 🧰 Tools Used in This Phase
 
 
 | Category                    | Tool                                           | Description                                   | Type                    |
