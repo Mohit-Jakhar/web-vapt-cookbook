@@ -21,16 +21,14 @@ To actively scan the target for open ports, services, directories, parameters, a
 - Scanning helps detect known misconfigurations or unpatched services.
 - It's often noisy — requires proper authorization in professional assessments.
 
-  Open-Source Tools Summary
-
-  | Tool            | Purpose & Importance                                                                                                                            |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Nmap**        | Industry-standard for scanning open ports and fingerprinting services. Crucial for identifying live hosts, exposed ports, and service versions. |
-| **Masscan**     | Ultra-fast port scanner to identify open ports at scale. Used when speed is critical and you're scanning large IP ranges.                       |
-| **FFUF**        | Web fuzzer used for directory and file brute-forcing. Helps discover hidden endpoints like `/admin`, `/api`, or misconfigured directories.      |
-| **Dirsearch**   | Python-based web path discovery tool. Useful for recursive directory busting and filtering status codes or extensions.                          |
-| **ParamSpider** | Crawls target domains and JS files to extract URL parameters. Helps in identifying overlooked or undocumented parameters for fuzzing.           |
-| **Nuclei**      | Powerful template-based vulnerability scanner. Quickly detects known CVEs, misconfigurations, and common security issues in web apps.           |
-| **Nikto**       | Lightweight web server scanner. Finds outdated server software, exposed files, and insecure HTTP headers.                                       |
-| **WhatWeb**     | Detects technologies, frameworks, and plugins used by a web app. Useful for determining if known-vulnerable tech is in use.                     |
-
+| Tool            | What It Does                                               | Why It's Important                                                                      |
+| --------------- | ---------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| **Nmap**        | Scans open ports, detects services and versions            | Identifies exposed ports and services, builds the foundation for attack surface mapping |
+| **Masscan**     | Performs lightning-fast port scanning                      | Useful for large-scale IP/port scanning where speed is crucial                          |
+| **FFUF**        | Brute-forces directories and files on web servers          | Helps discover hidden endpoints like `/admin`, `/login`, `/backup.zip`                  |
+| **Dirsearch**   | Recursively enumerates paths and extensions                | Allows filtered and targeted directory discovery with extension support                 |
+| **Arjun**       | Discovers GET/POST parameters in web requests              | Reveals hidden input points for XSS, SQLi, and other injection testing                  |
+| **ParamSpider** | Crawls URLs and JS files to find parameters                | Extracts potential attack vectors from deeply embedded or undocumented locations        |
+| **Nuclei**      | Scans for known CVEs and misconfigurations using templates | Enables fast, automated vulnerability assessment with real-time CVE checks              |
+| **Nikto**       | Detects outdated software and insecure server settings     | Good for baseline server misconfigurations and weak SSL/TLS setups                      |
+| **WhatWeb**     | Fingerprints technologies used by the application          | Helps prioritize based on known-vulnerable tech like outdated CMS, PHP versions         |
