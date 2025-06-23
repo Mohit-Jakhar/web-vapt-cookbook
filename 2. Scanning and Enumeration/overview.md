@@ -34,3 +34,6 @@ To actively scan the target for open ports, services, directories, parameters, a
 | **Nuclei**      | Scans for known CVEs and misconfigurations using templates | Enables fast, automated vulnerability assessment with real-time CVE checks              |
 | **Nikto**       | Detects outdated software and insecure server settings     | Good for baseline server misconfigurations and weak SSL/TLS setups                      |
 | **WhatWeb**     | Fingerprints technologies used by the application          | Helps prioritize based on known-vulnerable tech like outdated CMS, PHP versions         |
+
+
+For tools installation and usage, refer to the Installation.md
