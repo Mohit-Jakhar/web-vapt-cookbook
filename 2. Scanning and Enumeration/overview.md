@@ -1,4 +1,4 @@
-🔍 Phase 2: Scanning & Enumeration
+## Phase 2: Scanning & Enumeration - Overview
 
 🎯 Objective
 
