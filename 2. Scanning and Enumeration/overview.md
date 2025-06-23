@@ -24,16 +24,27 @@ To actively scan the target for open ports, services, directories, parameters, a
 
 🧰 Tools Used in This Phase
 
-| Tool            | What It Does                                               | Why It's Important                                                                      |
-| --------------- | ---------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| **Nmap**        | Scans open ports, detects services and versions            | Identifies exposed ports and services, builds the foundation for attack surface mapping |
-| **Masscan**     | Performs lightning-fast port scanning                      | Useful for large-scale IP/port scanning where speed is crucial                          |
-| **FFUF**        | Brute-forces directories and files on web servers          | Helps discover hidden endpoints like `/admin`, `/login`, `/backup.zip`                  |
-| **Dirsearch**   | Recursively enumerates paths and extensions                | Allows filtered and targeted directory discovery with extension support                 |
-| **ParamSpider** | Crawls URLs and JS files to find parameters                | Extracts potential attack vectors from deeply embedded or undocumented locations        |
-| **Nuclei**      | Scans for known CVEs and misconfigurations using templates | Enables fast, automated vulnerability assessment with real-time CVE checks              |
-| **Nikto**       | Detects outdated software and insecure server settings     | Good for baseline server misconfigurations and weak SSL/TLS setups                      |
-| **WhatWeb**     | Fingerprints technologies used by the application          | Helps prioritize based on known-vulnerable tech like outdated CMS, PHP versions         |
 
+| Category                    | Tool                                           | Description                                   | Type                    |
+| --------------------------- | ---------------------------------------------- | --------------------------------------------- | ----------------------- |
+| **Network Scan**            | **Nmap**, **Masscan**                          | Standard for port & service discovery         | Open Source             |
+|                             | **RustScan**                                   | Blazingly fast scanner with Nmap integration  | Open Source             |
+|                             | **ZMap**                                       | Internet-scale port scanning                  | Open Source             |
+| **Subdomain Discovery**     | **Amass**, **Subfinder**, **Assetfinder**      | Find large attack surface                     | Open Source             |
+|                             | **SecurityTrails**, **Censys**, **Shodan**     | Passive OSINT on infra & ports                | Mixed (Free + Paid API) |
+| **Web Enumeration**         | **FFUF**, **Dirsearch**, **Gobuster**          | Find hidden endpoints                         | Open Source             |
+|                             | **Burp Suite Pro**                             | Spider, content discovery, active scanning    | ⚠️ Paid                 |
+|                             | **Feroxbuster**                                | Fast recursive content discovery (Rust-based) | Open Source             |
+| **Parameter Discovery**     | **Arjun**, **ParamSpider**, **GF + grep**      | Extract parameters for fuzzing                | Open Source             |
+|                             | **Burp Param Miner (Ext)**                     | Guess hidden parameters via cache probing     | Burp Plugin             |
+| **Tech Stack Detection**    | **WhatWeb**, **Wappalyzer CLI**, **WebTech**   | CMS, JS libs, plugins                         | Open Source             |
+|                             | **BuiltWith**, **Netcraft**                    | Web fingerprinting services                   | Paid                    |
+| **CVE Detection**           | **Nuclei**, **Vulners**, **OpenVAS**           | Template or signature-based scanning          | Open Source             |
+|                             | **Burp Pro Active Scan**, **Nessus**           | Commercial-grade CVE detection                | ⚠️ Paid                 |
+| **JS Analysis**             | **LinkFinder**, **JSParser**, **SecretFinder** | Scrape API keys, URLs, endpoints              | Open Source             |
+|                             | **GitLeaks**, **TruffleHog**                   | Secret discovery in JS, Git, etc.             | Open Source             |
+| **DNS / VHOST Enumeration** | **dnsx**, **vhostscan**, **massdns**           | Subdomain + VHost fuzzing                     | Open Source             |
+|                             | **Burp Turbo Intruder**, **Custom Wordlists**  | Bypass rate-limits, virtual host hijack       | Mixed                   |
+| **Crawlers**                | **Hakrawler**, **Katana**, **Crawlcat**        | Crawl web apps for inputs                     | Open Source             |
+| **Automation Suites**       | **ReconFTW**, **LazyRecon**, **BugHunter**     | Toolchains for automation                     | Open Source             |
 
-For tools installation and usage, refer to the Installation.md
