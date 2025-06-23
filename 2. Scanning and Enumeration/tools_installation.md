@@ -119,3 +119,6 @@ This document provides step-by-step instructions for installing and using open-s
 - **Usage**:
   ```bash
   whatweb https://example.com
+
+**Note**: This guide includes some of the most commonly used tools for scanning and enumeration, but it's important to remember that **not all tools can be listed or described here**. The cybersecurity landscape is vast and constantly evolving — always explore and test tools based on your specific use case and environment.
+
