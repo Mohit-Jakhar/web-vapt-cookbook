@@ -21,13 +21,15 @@ To actively scan the target for open ports, services, directories, parameters, a
 - Scanning helps detect known misconfigurations or unpatched services.
 - It's often noisy — requires proper authorization in professional assessments.
 
+
+🧰 Tools Used in This Phase
+
 | Tool            | What It Does                                               | Why It's Important                                                                      |
 | --------------- | ---------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | **Nmap**        | Scans open ports, detects services and versions            | Identifies exposed ports and services, builds the foundation for attack surface mapping |
 | **Masscan**     | Performs lightning-fast port scanning                      | Useful for large-scale IP/port scanning where speed is crucial                          |
 | **FFUF**        | Brute-forces directories and files on web servers          | Helps discover hidden endpoints like `/admin`, `/login`, `/backup.zip`                  |
 | **Dirsearch**   | Recursively enumerates paths and extensions                | Allows filtered and targeted directory discovery with extension support                 |
-| **Arjun**       | Discovers GET/POST parameters in web requests              | Reveals hidden input points for XSS, SQLi, and other injection testing                  |
 | **ParamSpider** | Crawls URLs and JS files to find parameters                | Extracts potential attack vectors from deeply embedded or undocumented locations        |
 | **Nuclei**      | Scans for known CVEs and misconfigurations using templates | Enables fast, automated vulnerability assessment with real-time CVE checks              |
 | **Nikto**       | Detects outdated software and insecure server settings     | Good for baseline server misconfigurations and weak SSL/TLS setups                      |
